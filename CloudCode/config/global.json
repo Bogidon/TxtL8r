@@ -1,0 +1,11 @@
+{
+    "applications": {
+        "Txt L8r Drive Now": {
+            "applicationId": "25XdEPnYd8vKO3RiC06CDjiVnqUIEzIjK80UrZuP", 
+            "masterKey": "pOGxF1PfmSRga7Z1Din5ZyT6IXVbztGsUgdfFQUC"
+        }, 
+        "_default": {
+            "link": "Txt L8r Drive Now"
+        }
+    }
+}

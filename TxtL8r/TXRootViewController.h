@@ -10,6 +10,4 @@
 
 @interface TXRootViewController : UIViewController <UIPageViewControllerDelegate>
 
-@property (strong, nonatomic) UIPageViewController *pageViewController;
-
 @end
