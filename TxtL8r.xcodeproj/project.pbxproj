@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430FDFBE18BAB3BF009A163E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 430FDFBD18BAB3BF009A163E /* FacebookSDK.framework */; };
 		43687AAA18BAA81200D57C96 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43687AA918BAA81200D57C96 /* Parse.framework */; };
 		43687AAC18BAA83700D57C96 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43687AAB18BAA83700D57C96 /* AudioToolbox.framework */; };
 		43687AAE18BAA83D00D57C96 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43687AAD18BAA83D00D57C96 /* CFNetwork.framework */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		430FDFBD18BAB3BF009A163E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		43687AA918BAA81200D57C96 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		43687AAB18BAA83700D57C96 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		43687AAD18BAA83D00D57C96 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -96,6 +98,7 @@
 				43C47D9F18B62B8D004483D5 /* CoreGraphics.framework in Frameworks */,
 				43687AAE18BAA83D00D57C96 /* CFNetwork.framework in Frameworks */,
 				43687AAC18BAA83700D57C96 /* AudioToolbox.framework in Frameworks */,
+				430FDFBE18BAB3BF009A163E /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +199,7 @@
 				43C47DA018B62B8D004483D5 /* UIKit.framework */,
 				43C47DC118B62B8D004483D5 /* XCTest.framework */,
 				43687AA918BAA81200D57C96 /* Parse.framework */,
+				430FDFBD18BAB3BF009A163E /* FacebookSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -280,6 +284,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Bogdan Vitoc";
 				TargetAttributes = {
+					43C47D9818B62B8D004483D5 = {
+						DevelopmentTeam = F82QE7SAA2;
+					};
 					43C47DBF18B62B8D004483D5 = {
 						TestTargetID = 43C47D9818B62B8D004483D5;
 					};
@@ -471,16 +478,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Bogdan/Apps/TxtL8r,
+					/Users/Bogdan/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TxtL8r/TxtL8r-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "TxtL8r/TxtL8r-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5A8481AE-8F09-4E90-8A41-4D69B5AE11CC";
+				PROVISIONING_PROFILE = "5AA9C91C-9803-47D2-A53A-237839BC5B78";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -490,14 +501,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/Bogdan/Apps/TxtL8r,
+					/Users/Bogdan/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TxtL8r/TxtL8r-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				INFOPLIST_FILE = "TxtL8r/TxtL8r-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "4F514845-441F-4FE7-B037-9D8F6F16F2ED";
 				WRAPPER_EXTENSION = app;

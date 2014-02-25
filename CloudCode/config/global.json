@@ -7,5 +7,8 @@
         "_default": {
             "link": "Txt L8r Drive Now"
         }
+    }, 
+    "global": {
+        "parseVersion": "1.2.16"
     }
 }
