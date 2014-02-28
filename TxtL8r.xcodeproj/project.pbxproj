@@ -16,13 +16,12 @@
 		43687AB418BAA85700D57C96 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43687AB318BAA85700D57C96 /* MobileCoreServices.framework */; };
 		43687AB618BAA85E00D57C96 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43687AB518BAA85E00D57C96 /* QuartzCore.framework */; };
 		43687AB818BAA86400D57C96 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43687AB718BAA86400D57C96 /* Security.framework */; };
-		43687ABA18BAA86A00D57C96 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43687AB918BAA86A00D57C96 /* StoreKit.framework */; };
 		43687ABC18BAA87000D57C96 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43687ABB18BAA87000D57C96 /* SystemConfiguration.framework */; };
 		438C948918B6BBD50059AEEA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 438C948B18B6BBD50059AEEA /* Localizable.strings */; };
+		43A0524E18BC42AE00BB1860 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43C47DA518B62B8D004483D5 /* InfoPlist.strings */; };
 		43C47D9D18B62B8D004483D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C47D9C18B62B8D004483D5 /* Foundation.framework */; };
 		43C47D9F18B62B8D004483D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C47D9E18B62B8D004483D5 /* CoreGraphics.framework */; };
 		43C47DA118B62B8D004483D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43C47DA018B62B8D004483D5 /* UIKit.framework */; };
-		43C47DA718B62B8D004483D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 43C47DA518B62B8D004483D5 /* InfoPlist.strings */; };
 		43C47DA918B62B8D004483D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C47DA818B62B8D004483D5 /* main.m */; };
 		43C47DAD18B62B8D004483D5 /* TXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C47DAC18B62B8D004483D5 /* TXAppDelegate.m */; };
 		43C47DB018B62B8D004483D5 /* TXRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43C47DAF18B62B8D004483D5 /* TXRootViewController.m */; };
@@ -55,15 +54,17 @@
 		43687AB318BAA85700D57C96 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		43687AB518BAA85E00D57C96 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		43687AB718BAA86400D57C96 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		43687AB918BAA86A00D57C96 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		43687ABB18BAA87000D57C96 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		438C948818B6BBA00059AEEA /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Main.strings; sourceTree = "<group>"; };
-		438C948A18B6BBD50059AEEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		43A0523D18BC35E100BB1860 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		43A0524218BC407C00BB1860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		43A0524318BC408B00BB1860 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Main.strings; sourceTree = "<group>"; };
+		43A0524418BC409E00BB1860 /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
+		43A0524C18BC41F200BB1860 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = "en.lproj/TxtL8r-Info.plist"; sourceTree = "<group>"; };
+		43A0525018BC471800BB1860 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		43C47D9918B62B8D004483D5 /* TxtL8r.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TxtL8r.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C47D9C18B62B8D004483D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		43C47D9E18B62B8D004483D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		43C47DA018B62B8D004483D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		43C47DA418B62B8D004483D5 /* TxtL8r-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TxtL8r-Info.plist"; sourceTree = "<group>"; };
 		43C47DA618B62B8D004483D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		43C47DA818B62B8D004483D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		43C47DAA18B62B8D004483D5 /* TxtL8r-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TxtL8r-Prefix.pch"; sourceTree = "<group>"; };
@@ -71,7 +72,6 @@
 		43C47DAC18B62B8D004483D5 /* TXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXAppDelegate.m; sourceTree = "<group>"; };
 		43C47DAE18B62B8D004483D5 /* TXRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TXRootViewController.h; sourceTree = "<group>"; };
 		43C47DAF18B62B8D004483D5 /* TXRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TXRootViewController.m; sourceTree = "<group>"; };
-		43C47DB818B62B8D004483D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		43C47DBA18B62B8D004483D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		43C47DC018B62B8D004483D5 /* TxtL8rTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TxtL8rTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C47DC118B62B8D004483D5 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -89,7 +89,6 @@
 				43C47D9D18B62B8D004483D5 /* Foundation.framework in Frameworks */,
 				43687AAA18BAA81200D57C96 /* Parse.framework in Frameworks */,
 				43687ABC18BAA87000D57C96 /* SystemConfiguration.framework in Frameworks */,
-				43687ABA18BAA86A00D57C96 /* StoreKit.framework in Frameworks */,
 				43687AB818BAA86400D57C96 /* Security.framework in Frameworks */,
 				43687AB618BAA85E00D57C96 /* QuartzCore.framework in Frameworks */,
 				43687AB418BAA85700D57C96 /* MobileCoreServices.framework in Frameworks */,
@@ -186,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				43687ABB18BAA87000D57C96 /* SystemConfiguration.framework */,
-				43687AB918BAA86A00D57C96 /* StoreKit.framework */,
 				43687AB718BAA86400D57C96 /* Security.framework */,
 				43687AB518BAA85E00D57C96 /* QuartzCore.framework */,
 				43687AB318BAA85700D57C96 /* MobileCoreServices.framework */,
@@ -207,7 +205,7 @@
 		43C47DA318B62B8D004483D5 /* Other sources */ = {
 			isa = PBXGroup;
 			children = (
-				43C47DA418B62B8D004483D5 /* TxtL8r-Info.plist */,
+				43A0524B18BC41F200BB1860 /* TxtL8r-Info.plist */,
 				43C47DA518B62B8D004483D5 /* InfoPlist.strings */,
 				438C948B18B6BBD50059AEEA /* Localizable.strings */,
 				43C47DA818B62B8D004483D5 /* main.m */,
@@ -286,6 +284,11 @@
 				TargetAttributes = {
 					43C47D9818B62B8D004483D5 = {
 						DevelopmentTeam = F82QE7SAA2;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					43C47DBF18B62B8D004483D5 = {
 						TestTargetID = 43C47D9818B62B8D004483D5;
@@ -319,7 +322,7 @@
 			files = (
 				43C47DBB18B62B8D004483D5 /* Images.xcassets in Resources */,
 				438C948918B6BBD50059AEEA /* Localizable.strings in Resources */,
-				43C47DA718B62B8D004483D5 /* InfoPlist.strings in Resources */,
+				43A0524E18BC42AE00BB1860 /* InfoPlist.strings in Resources */,
 				43C47DB918B62B8D004483D5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,10 +370,20 @@
 		438C948B18B6BBD50059AEEA /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				438C948A18B6BBD50059AEEA /* Base */,
+				43A0523D18BC35E100BB1860 /* en */,
+				43A0524418BC409E00BB1860 /* ro */,
+				43A0525018BC471800BB1860 /* Base */,
 			);
 			name = Localizable.strings;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		43A0524B18BC41F200BB1860 /* TxtL8r-Info.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				43A0524C18BC41F200BB1860 /* en */,
+			);
+			name = "TxtL8r-Info.plist";
 			sourceTree = "<group>";
 		};
 		43C47DA518B62B8D004483D5 /* InfoPlist.strings */ = {
@@ -384,8 +397,8 @@
 		43C47DB718B62B8D004483D5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				43C47DB818B62B8D004483D5 /* Base */,
-				438C948818B6BBA00059AEEA /* ro */,
+				43A0524218BC407C00BB1860 /* Base */,
+				43A0524318BC408B00BB1860 /* ro */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -488,10 +501,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TxtL8r/TxtL8r-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = "TxtL8r/TxtL8r-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_FILE = "TxtL8r/en.lproj/TxtL8r-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "5AA9C91C-9803-47D2-A53A-237839BC5B78";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -511,10 +524,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TxtL8r/TxtL8r-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				INFOPLIST_FILE = "TxtL8r/TxtL8r-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				INFOPLIST_FILE = "TxtL8r/en.lproj/TxtL8r-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4F514845-441F-4FE7-B037-9D8F6F16F2ED";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

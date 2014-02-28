@@ -6,5 +6,5 @@
   Copyright (c) 2014 Bogdan Vitoc. All rights reserved.
 */
 
-"isDriving" = "Driving";
-"notDriving" = "Not Driving";
+"isDriving" = "Conducii";
+"notDriving" = "Nu Conducii";

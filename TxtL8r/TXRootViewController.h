@@ -10,4 +10,8 @@
 
 @interface TXRootViewController : UIViewController <UIPageViewControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *drivingButton;
+
+- (IBAction)changeDriving:(id)sender;
+
 @end
