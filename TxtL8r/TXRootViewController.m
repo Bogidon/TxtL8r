@@ -34,34 +34,33 @@
         [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,
                                                       NSDictionary* result,
                                                       NSError *error) {
+            
             // result will contain an array with your user's friends in the "data" key
             NSArray *friendObjects = [result objectForKey:@"data"];
             NSMutableArray *friendIDs = [NSMutableArray arrayWithCapacity:friendObjects.count];
+            
             // Create a list of friends' Facebook IDs
             for (NSDictionary *friendObject in friendObjects) {
                 [friendIDs addObject:[friendObject objectForKey:@"id"]];
             }
             
+            //Use parse CloudCode to put the fbIds of friends that also use app into an array
             [PFCloud callFunctionInBackground:@"parseFriends"
                                 withParameters:@{@"friendIDs": friendIDs}
-                                block:^(NSMutableArray *friends, NSError *error){
+                                block:^(NSArray *friends, NSError *error){
                 if (!error) {
-                    parseFriends = friends;
+                    parseFriends = [[NSMutableArray alloc] init];
+                    
+                    for (PFUser *user in friends) {
+                        [parseFriends addObject:user[@"fbId"]];
+                    }
                     NSLog(@"%@", parseFriends);
                 }
             }];
-            // Construct a PFUser query that will find friends whose facebook ids
-            // are contained in the current user's friend list.
-//            PFQuery *friendsQuery = [PFUser query];
-//            [friendsQuery whereKey:@"fbId" containedIn:friendIds];
-//            
-//            // findObjects will return a list of PFUsers that are friends
-//            // with the current user
-//            NSArray *friendUsers = [friendsQuery findObjects];
         }];
     };
     
-    [PFFacebookUtils logInWithPermissions:@[@"basic_info"] block:^(PFUser *user, NSError *error) {
+    [PFFacebookUtils logInWithPermissions:@[@"basic_info", @"email", @"user_likes"] block:^(PFUser *user, NSError *error) {
         if (!user) {
             if (!error) {
                 NSLog(@"Uh oh. The user cancelled the Facebook login.");
@@ -76,11 +75,17 @@
                     user.username = [result objectForKey:@"name"];
                     [[PFUser currentUser] setObject:[result objectForKey:@"id"]
                                              forKey:@"fbId"];
+                    [[PFUser currentUser] setObject:[NSNumber numberWithBool:NO] forKey:@"drving"];
+                    [[PFUser currentUser] saveInBackground];
+                    
+                    [[PFInstallation currentInstallation] setObject:[result objectForKey:@"id"]
+                                                             forKey:@"fbId"];
+                    [[PFInstallation currentInstallation] saveInBackground];
+                }
+                else{
+                    NSLog(@"%@", error);
                 }
             }];
-            [[PFUser currentUser] setObject:[NSNumber numberWithBool:NO]
-                                     forKey:@"driving"];
-            [[PFUser currentUser] saveInBackground];
 
             findMatchingFriends();
             NSLog(@"User signed up and logged in through Facebook!");
@@ -119,15 +124,19 @@
         [[PFUser currentUser] setObject:[NSNumber numberWithBool:YES]
                                  forKey:@"driving"];
         
-//        PFQuery *friendQuery = [PFUser query];
-//        [friendQuery whereKey:@"" containedIn:<#(NSArray *)#>]
-//        // Find devices associated with these users
-//        PFQuery *pushQuery = [PFInstallation query];
-//        [pushQuery whereKey:@"User" containedIn:parseFriends];
-//        
-//        // Send push notification to query
-//        [PFPush sendPushMessageToQueryInBackground:pushQuery
-//                                       withMessage:@"Hello World!"];
+        // Find devices associated with these users
+        PFQuery *pushQuery = [PFInstallation query];
+        [pushQuery whereKey:@"fbId" containedIn:parseFriends];
+        
+        // Send push notification to query
+        NSDictionary *messageData = [NSDictionary dictionaryWithObjectsAndKeys:
+            @"Don't text me! I'm driving!", @"alert",
+            [PFUser currentUser].username, @"title",
+            @"Increment", @"badge",
+            nil];
+        
+        [PFPush sendPushDataToQueryInBackground:pushQuery
+                                       withData:messageData];
         
     }
     [[PFUser currentUser] saveInBackground];
